@@ -1,5 +1,7 @@
 # Sum by factors
 
+This challenge can be found [here](https://www.codewars.com/kata/54d496788776e49e6b00052f)
+
 Given an array of positive or negative integers
 
 `I= [i1,..,in]`

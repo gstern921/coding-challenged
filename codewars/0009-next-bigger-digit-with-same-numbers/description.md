@@ -1,5 +1,7 @@
 # Next bigger digit with same numbers
 
+This challenge can be found [here](https://www.codewars.com/kata/55983863da40caa2c900004e)
+
 Create a function that takes a positive integer and returns the next bigger number that can be formed by rearranging its digits. For example:
 
 ```

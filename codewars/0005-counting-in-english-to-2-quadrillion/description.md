@@ -1,5 +1,7 @@
 # Counting in English one, two, three... to 2 Quadrillion (2,000,000,000,000,000)
 
+This challenge can be found [here](https://www.codewars.com/kata/5461c0e29726f66bb60010b1)
+
 Please create a function which takes a number and returns the name of the number in English as a lowercase string. The function should support at least the numbers ±2 Quadrillion (±2,000,000,000,000,000) as well as positive and negative infinity.
 
 This is a harder kata than it might sound! Be sure to read the requirements thoroughly.
