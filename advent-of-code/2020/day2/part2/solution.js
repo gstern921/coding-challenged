@@ -15,4 +15,5 @@ const result = data.split('\n')
     const charOne = password.charAt(allowedIndexOne - 1);
     const charTwo = password.charAt(allowedIndexTwo - 1);
     return (charOne === ruleCharacter || charTwo === ruleCharacter) && charOne !== charTwo;
-  }).length  
+  }).length
+  
