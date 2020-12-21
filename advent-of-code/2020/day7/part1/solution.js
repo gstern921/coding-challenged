@@ -1,56 +1,49 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-let data = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf-8');
+let data = fs.readFileSync(path.join(__dirname, "input.txt"), "utf-8");
 
 if (!data) {
-  throw new Error('No Data Found!')
+  throw new Error("No Data Found!");
 }
 
 const bagContainers = data
-  .split('\n')
-  // .slice(230,240)
+  .split("\n")
   .map((bagInfo) => {
-  // return bagInfo;
-  return bagInfo
-    .replace(/( bags?)|\./g, '')
-    .split(/(?: contain )|(?:, )/)
+    return bagInfo.replace(/( bags?)|\./g, "").split(/(?: contain )|(?:, )/);
   })
-  .filter((bagInfo) => !bagInfo.includes('no other'))
+  .filter((bagInfo) => !bagInfo.includes("no other"))
   .reduce((bagContainedBy, bagInfo) => {
     const bagName = bagInfo[0];
     const bagContents = bagInfo.slice(1);
-    bagContents.forEach((content => {
-      const [quantity, ...containedBagNameParts] = content.split(' ')
-      const containedBagName = containedBagNameParts.join(' ');
+    bagContents.forEach((content) => {
+      const [quantity, ...containedBagNameParts] = content.split(" ");
+      const containedBagName = containedBagNameParts.join(" ");
       bagContainedBy[containedBagName] = bagContainedBy[containedBagName] || {};
       bagContainedBy[containedBagName][bagName] = +quantity;
-    }));
+    });
     return bagContainedBy;
   }, {});
 
-  function getContainersForBagName(bagName, containers = []) {
+function getContainersForBagName(bagName, containers = []) {
+  const bagNameContainers = bagContainers[bagName];
 
-    const bagNameContainers = bagContainers[bagName];
-
-    if (!bagNameContainers) {
-      return;
-    }
-
-    const containerNames = Object.keys(bagNameContainers);
-
-    for (let containerName of containerNames) {
-      if (!containers.includes(containerName)) {
-        containers.push(containerName);
-        getContainersForBagName(containerName, containers);
-      }
-    }
-
-    return containers;
+  if (!bagNameContainers) {
+    return;
   }
 
-  const bagName = 'shiny gold';
+  const containerNames = Object.keys(bagNameContainers);
 
-  console.log(getContainersForBagName(bagName).length);
+  for (let containerName of containerNames) {
+    if (!containers.includes(containerName)) {
+      containers.push(containerName);
+      getContainersForBagName(containerName, containers);
+    }
+  }
 
-  // console.log(bagContainers[bagName]);
+  return containers;
+}
+
+const bagName = "shiny gold";
+
+console.log(getContainersForBagName(bagName).length);
