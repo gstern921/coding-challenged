@@ -1,6 +1,6 @@
 # Day 6: Custom Customs
 
-This challenge can be found [here](https://adventofcode.com/2020/day/4#part2)
+This challenge can be found [here](https://adventofcode.com/2020/day/6)
 
 As your flight approaches the regional airport where you'll switch to a much larger plane, customs declaration forms are distributed to the passengers.
 

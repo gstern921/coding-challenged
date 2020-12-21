@@ -1,6 +1,6 @@
 # Day 6: Custom Customs Part 2
 
-This challenge can be found [here](https://adventofcode.com/2020/day/5#part2)
+This challenge can be found [here](https://adventofcode.com/2020/day/6#part2)
 
 As you finish the last group's customs declaration, you notice that you misread one word in the instructions:
 
