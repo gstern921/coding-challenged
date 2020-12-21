@@ -31,15 +31,11 @@ for (let boardingPass of boardingPasses) {
     } else if (char === "L") {
       columnEnd = calcUpperHalf(columnStart, columnEnd);
     }
-
-    
   }
 
   const seatId = calcSeatId(rowStart, columnStart);
   maxSeatId = Math.max(maxSeatId, seatId);
-
 }
-
 
 function calcLowerHalf(start, end) {
   return start + Math.ceil((end - start) / 2);

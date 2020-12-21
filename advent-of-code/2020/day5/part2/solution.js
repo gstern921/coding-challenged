@@ -11,14 +11,6 @@ const boardingPasses = data.split("\n");
 
 const mySeatId = findMySeatId(boardingPasses);
 
-function calcLowerHalf(start, end) {
-  return start + Math.ceil((end - start) / 2);
-}
-
-function calcUpperHalf(start, end) {
-  return start + Math.floor((end - start) / 2);
-}
-
 function calcSeatId(boardingPass) {
   let rowStart = 0;
   let rowEnd = 127;
@@ -39,6 +31,14 @@ function calcSeatId(boardingPass) {
   }
 
   return rowStart * 8 + columnStart;
+
+  function calcLowerHalf(start, end) {
+    return start + Math.ceil((end - start) / 2);
+  }
+  
+  function calcUpperHalf(start, end) {
+    return start + Math.floor((end - start) / 2);
+  }
 }
 
 function findMySeatId(boardingPasses) {
