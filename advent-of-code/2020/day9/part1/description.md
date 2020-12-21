@@ -1,6 +1,6 @@
 # Day 9: Encoding Error
 
-This challenge can be found [here](https://adventofcode.com/2020/day/8)
+This challenge can be found [here](https://adventofcode.com/2020/day/9)
 
 With your neighbor happily enjoying their video game, you turn your attention to an open data port on the little screen in the seat in front of you.
 

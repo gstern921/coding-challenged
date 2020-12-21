@@ -1,6 +1,6 @@
 # Day 9: Encoding Error Part 2
 
-This challenge can be found [here](https://adventofcode.com/2020/day/8#part2)
+This challenge can be found [here](https://adventofcode.com/2020/day/9#part2)
 
 The final step in breaking the XMAS encryption relies on the invalid number you just found: you must find a contiguous set of at least two numbers in your list which sum to the invalid number from step 1.
 
