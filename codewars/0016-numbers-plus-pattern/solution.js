@@ -1,5 +1,9 @@
 function pattern(n){
   
+  if (n === 0) {
+    return '';
+  }
+  
   let result = new Array(2 * n - 1);
   
   for (let i = 1; i <= n; i++) {
