@@ -1,6 +1,6 @@
 # URL Shortener
 
-This challenge can be found [here](https://www.codewars.com/kata/5fee4559135609002c1a1841/train/javascript)
+This challenge can be found [here](https://www.codewars.com/kata/5fee4559135609002c1a1841)
 
 ## Background Information
 
