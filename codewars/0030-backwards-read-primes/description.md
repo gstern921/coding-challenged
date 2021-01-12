@@ -1,6 +1,6 @@
 # Backwards Read Primes
 
-This challenge can be found [here](https://www.codewars.com/kata/5539fecef69c483c5a000015/train/javascript)
+This challenge can be found [here](https://www.codewars.com/kata/5539fecef69c483c5a000015)
 
 Backwards Read Primes are primes that when read backwards in base 10 (from right to left) are a different prime. (This rules out primes which are palindromes.)
 ```
