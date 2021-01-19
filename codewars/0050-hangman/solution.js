@@ -21,7 +21,7 @@ function Machine(wordList){
       
       for (let letter of possibleLetters) {
         // Find out how many remaining words include the current letter
-        const wordCountWithLetter = getWordCountWithLetter(possibleWords, letter);
+        const wordCountWithLetter = getWordCountWithLetter(possibleWords, letter, latestResult);
         if (wordCountWithLetter > highestLetterWordCount) {
           highestLetterWordCount = wordCountWithLetter;
           mostCommonLetter = letter;
@@ -54,14 +54,17 @@ function Machine(wordList){
       }
     }
     
-    function getWordCountWithLetter(words, letter) {
-      let result = 0;
-      for (let word of words) {
-        if (word.includes(letter)) {
-          result++;
+    function getWordCountWithLetter(words, letter, result) {
+      let count = 0;
+      for (let i = 0; i < words.length; i++) {
+        for (let j = 0; j < result.length; j++) {
+          if (result[j] === '_' && words[i][j] === letter) {
+            count++;
+            break;
+          }
         }
       }
-      return result;
+      return count;
     }
   }
 }
