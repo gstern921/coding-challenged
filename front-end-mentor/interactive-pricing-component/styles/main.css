@@ -2,9 +2,18 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background: url(../images/bg-pattern.svg) no-repeat 0 0;
+  background: url(../images/pattern-circles.svg) no-repeat 50% 50px,url(../images/bg-pattern.svg) no-repeat 0 0;
+  background-size: 150px 150px, 100vw 60vh;
   min-height: 100vh;
+  font-family:sans-serif;
 }
 *,*::before,*::after {
   box-sizing: inherit;
+}
+
+.pricing-main {
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+  margin: 100px auto;
 }
