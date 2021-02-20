@@ -1,10 +1,3 @@
-const decodeMorse = function(morseCode){
-  return morseCode
-    .trim()
-    .split(/\s{3}/)
-    .map(
-      w => w.split(' ')
-         .map(c => MORSE_CODE[c])
-         .join('')
-    ).join(' ')
-}
+var countBits = function(n) {
+  return n.toString(2).split('').filter(c=> c === '1').length
+};
