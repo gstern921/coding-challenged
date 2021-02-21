@@ -1,13 +1,12 @@
 function humanReadable(totalSeconds) {
   let remainingSeconds = totalSeconds;
   
-  let hours = Math.floor(remainingSeconds / 3600);
-  remainingSeconds -= hours * 3600;
+  const hours = Math.floor(remainingSeconds / 3600);
+  remainingSeconds %= 3600
   
-  let minutes =  Math.floor(remainingSeconds / 60);
-  remainingSeconds -= minutes * 60;
+  const minutes =  Math.floor(remainingSeconds / 60);
   
-  let seconds = remainingSeconds;
+  const seconds = remainingSeconds % 60;
   
   return `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`
   
